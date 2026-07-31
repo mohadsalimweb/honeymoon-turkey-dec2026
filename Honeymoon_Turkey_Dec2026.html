@@ -80,6 +80,8 @@ section > h2, section > div > h2 { margin-bottom: 0.5em; }
 .badge { display: inline-block; background: linear-gradient(135deg, var(--accent), var(--rose)); color: white; padding: 5px 14px; border-radius: 999px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; vertical-align: middle; margin-left: 12px; font-weight: 600; }
 
 table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 1.2em 0; font-size: 15px; background: var(--bg-panel); border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-md); }
+.table-scroll { margin: 1.2em 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-sm); }
+.table-scroll table { margin: 0; }
 th, td { padding: 14px 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 thead th { background: rgba(0,0,0,0.03); color: var(--ink); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
 tbody tr:last-child td { border-bottom: 0; }
@@ -202,6 +204,7 @@ footer .heart { color: var(--accent); margin: 0 6px; }
   nav.top .lang-switch { flex-shrink: 0; margin-left: auto; }
   table { font-size: 13px; }
   th, td { padding: 10px 12px; }
+  .table-scroll table { min-width: 640px; }
   footer { padding: 40px 20px; font-size: 12px; }
 }
 
@@ -984,6 +987,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
     <div class="section-eyebrow">Money</div>
     <h2>Budget at a glance.</h2>
     <p>All figures per <strong>couple</strong>, 8 days / 7 nights. OMR values assume 1 OMR ≈ 92 TRY. TRY is volatile — book hotels in USD/EUR when possible.</p>
+    <div class="table-scroll">
     <table>
       <thead>
         <tr>
@@ -1009,6 +1013,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>TOTAL</td><td class="num">134</td><td class="num">244</td><td class="num">515</td><td class="num">1,454</td><td class="num">2,657</td><td class="num">5,596</td></tr>
       </tbody>
     </table>
+    </div>
     <h3>Attraction pass cheat-sheet (per couple)</h3>
     <ul>
       <li>Hagia Sophia (mosque, free — women take a scarf)</li>
@@ -1037,6 +1042,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
   <div lang="ar">
     <h2>الميزانية باختصار</h2>
     <p>جميع الأرقام <strong>للثنائي</strong> لمدة 8 أيام / 7 ليالٍ. القيم بالريال العُماني على أساس 1 ريال ≈ 92 ليرة تركية. الليرة متذبذبة — احجز الفنادق بالدولار/اليورو عند الإمكان.</p>
+    <div class="table-scroll">
     <table>
       <thead>
         <tr>
@@ -1062,6 +1068,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>المجموع</td><td class="num">134</td><td class="num">244</td><td class="num">515</td><td class="num">1,454</td><td class="num">2,657</td><td class="num">5,596</td></tr>
       </tbody>
     </table>
+    </div>
     <h3>بطاقات المعالم (للثنائي)</h3>
     <ul>
       <li>آيا صوفيا (مسجد، مجاناً — النساء يحضرن وشاحاً)</li>
@@ -1097,6 +1104,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
     <div class="section-eyebrow">Where to sleep</div>
     <h2>Three cities, three feelings.</h2>
     <h3>Istanbul (Days 1-3 + Day 7)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>Tier</th><th>Hotel</th><th>Nightly</th><th>Why romantic</th><th>Nearest mosque</th></tr></thead>
       <tbody>
@@ -1105,8 +1113,10 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>Luxury</td><td>Four Seasons Bosphorus</td><td>TRY 28,000 / OMR 304</td><td>19th-century Ottoman palace on the Bosphorus</td><td>Ortaköy Cami 900 m</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Cappadocia (Days 4-5)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>Tier</th><th>Hotel</th><th>Nightly</th><th>Why romantic</th><th>Nearest mosque</th></tr></thead>
       <tbody>
@@ -1115,8 +1125,10 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>Luxury</td><td>Museum Hotel Uçhisar</td><td>TRY 22,000 / OMR 239</td><td>Relais &amp; Chateaux, private pool suite, private balloon</td><td>Uçhisar Merkez 700 m</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Pamukkale (Day 6)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>Tier</th><th>Hotel</th><th>Nightly</th><th>Why romantic</th><th>Nearest mosque</th></tr></thead>
       <tbody>
@@ -1125,10 +1137,12 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>Luxury</td><td>Hierapark Thermal &amp; Spa</td><td>TRY 12,500 / OMR 136</td><td>Massive thermal pool complex + honeymoon suite</td><td>Pamukkale Merkez 800 m</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
   <div lang="ar">
     <h2>الإقامة</h2>
     <h3>إسطنبول (أيام 1-3 + يوم 7)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>الفئة</th><th>الفندق</th><th>الليلة</th><th>لمسة رومانسية</th><th>أقرب مسجد</th></tr></thead>
       <tbody>
@@ -1137,8 +1151,10 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>فاخر</td><td>Four Seasons Bosphorus</td><td>28,000 ليرة / 304 ريال</td><td>قصر عثماني من القرن 19 على البوسفور</td><td>Ortaköy Cami 900م</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>كابادوكيا (أيام 4-5)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>الفئة</th><th>الفندق</th><th>الليلة</th><th>لمسة رومانسية</th><th>أقرب مسجد</th></tr></thead>
       <tbody>
@@ -1147,8 +1163,10 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>فاخر</td><td>Museum Hotel Uçhisar</td><td>22,000 ليرة / 239 ريال</td><td>Relais &amp; Chateaux، جناح بمسبح خاص، منطاد خاص</td><td>Uçhisar Merkez 700م</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>باموكالي (يوم 6)</h3>
+    <div class="table-scroll">
     <table>
       <thead><tr><th>الفئة</th><th>الفندق</th><th>الليلة</th><th>لمسة رومانسية</th><th>أقرب مسجد</th></tr></thead>
       <tbody>
@@ -1157,6 +1175,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td>فاخر</td><td>Hierapark Thermal &amp; Spa</td><td>12,500 ليرة / 136 ريال</td><td>مجمع مسابح حرارية كبير + جناح شهر عسل</td><td>Pamukkale Merkez 800م</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 </div>
@@ -1470,6 +1489,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
     <div class="section-eyebrow">If it snows / rains</div>
     <h2>Backup plans for every day.</h2>
     <p>Late December is deep winter — Istanbul drizzle/rain, Cappadocia snow, Pamukkale cold rain. Most is manageable, but the balloon is the one item that can be cancelled by wind or snow (30% chance in Dec). Balloon operators reschedule free.</p>
+    <div class="table-scroll">
     <table>
       <tbody>
         <tr><td><strong>Day 1</strong></td><td>Sultanahmet mosques are covered inside. Fallback: Basilica Cistern (indoor), Turkish bath.</td></tr>
@@ -1482,10 +1502,12 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td><strong>Day 8</strong></td><td>Spice Bazaar is covered. Airport has hours of covered shopping if flight delayed.</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
   <div lang="ar">
     <h2>خطة الأيام الممطرة/الثلجية</h2>
     <p>أواخر ديسمبر شتاء قارس — إسطنبول رذاذ/مطر، كابادوكيا ثلج، باموكالي مطر بارد. معظمه يمكن التعامل معه، لكن المنطاد هو البند الوحيد الذي قد يُلغى بسبب الرياح أو الثلج (احتمال 30% في ديسمبر). مشغّلو المناطيد يعيدون الجدولة مجاناً.</p>
+    <div class="table-scroll">
     <table>
       <tbody>
         <tr><td><strong>اليوم 1</strong></td><td>مساجد السلطان أحمد مغطاة من الداخل. البديل: صهريج البازيليكا (داخلي)، حمّام تركي.</td></tr>
@@ -1498,6 +1520,7 @@ html[data-lang="ar"] .chapter-hero { text-align: center; }
         <tr><td><strong>اليوم 8</strong></td><td>بازار التوابل مغطى. المطار به ساعات من التسوق المغطى إن تأخرت الرحلة.</td></tr>
       </tbody>
     </table>
+    </div>
   </div>
 </section>
 </div>
